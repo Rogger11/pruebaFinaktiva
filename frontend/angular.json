@@ -98,5 +98,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "frontend"
 }
