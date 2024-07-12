@@ -17,8 +17,8 @@ Esta aplicación permite gestionar eventos mediante un backend en .NET 6 y un fr
 1. **Clonar el Repositorio**:
 
    ```sh
-   git clone https://github.com/tu_usuario/tu_repositorio.git
-   cd tu_repositorio/backend
+   git clone https://github.com/Rogger11/pruebaFinaktiva/
+   cd pruebaFinaktiva/backend
    ```
 
 2. **Configurar la Base de Datos**:
