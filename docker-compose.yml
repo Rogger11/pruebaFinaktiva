@@ -9,7 +9,7 @@ services:
       - "412:80"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Server=localhost;User=admin;Password=Milton1103.;Database=Registration;Trusted_Connection=True;MultipleActiveResultSets=True;TrustServerCertificate=True;
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=Registration;User Id=sa;Password=your_password;
 
   frontend:
     build:
@@ -23,7 +23,7 @@ services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
-      SA_PASSWORD: "Milton1103."
+      SA_PASSWORD: "your_password"
       ACCEPT_EULA: "Y"
     ports:
       - "1433:1433"
