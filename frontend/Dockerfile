@@ -1,5 +1,5 @@
-# Utiliza la imagen oficial de Node.js para compilar la aplicación Angular
-FROM node:16 AS build
+# Utiliza la imagen oficial de Node.js 18 para compilar la aplicación Angular
+FROM node:18 AS build
 WORKDIR /app
 
 # Instalar Angular CLI globalmente
