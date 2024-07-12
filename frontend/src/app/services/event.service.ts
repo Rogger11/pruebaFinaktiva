@@ -8,7 +8,7 @@ import { EventLog } from '../models/event-log.model';
   providedIn: 'root'
 })
 export class EventService {
-  private apiUrl = 'https://localhost:7027/api/eventlogs';
+  private apiUrl = 'https://localhost:412/api/eventlogs';
 
   constructor(private http: HttpClient) { }
 
