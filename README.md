@@ -12,6 +12,8 @@ Se ha desplegado la aplicación en un ambiente de desarrollo en un Servidor Dedi
 [Backend](http://69.61.227.218:412/swagger)
 [Frontend](http://69.61.227.218:413)
 
+En caso de no estar disponible el servidor, ofrezco disculpas. Están realizando mantenimientos en la semana y es probable que se reinicie y que tenga caídas repentinas. 
+
 ## Requisitos
 
 - Docker
