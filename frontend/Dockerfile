@@ -2,6 +2,9 @@
 FROM node:16 AS build
 WORKDIR /app
 
+# Instalar Angular CLI globalmente
+RUN npm install -g @angular/cli
+
 # Instalar dependencias
 COPY package.json package-lock.json ./
 RUN npm install
