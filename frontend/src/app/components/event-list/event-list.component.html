@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <div class="card">
+      <div class="card-header">
+        <h4>Event List</h4>
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Date</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let event of events">
+              <td>{{ event.description }}</td>
+              <td>{{ event.eventDate | date }}</td>
+              <td>{{ event.eventType }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

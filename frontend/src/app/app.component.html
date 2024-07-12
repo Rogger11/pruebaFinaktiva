@@ -1,0 +1,8 @@
+<div class="container mt-4">
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+  <app-event-form></app-event-form>
+  <app-event-filters (filtersApplied)="onFiltersApplied($event)"></app-event-filters>
+  <app-event-list [events]="events"></app-event-list>
+</div>

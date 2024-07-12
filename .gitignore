@@ -1,0 +1,91 @@
+
+# DotNet specific
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
+bin
+obj
+out
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
+
+# Web specific
+project.lock.json
+project.fragment.lock.json
+artifacts
+
+# Windows image file caches
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Angular build artifacts
+dist/
+tmp/
+!dist/.gitkeep
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Microsoft Azure Build Output
+csx
+*.build.csdef
+
+# Others
+.vscode/
+.idea/

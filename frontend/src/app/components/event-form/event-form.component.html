@@ -1,0 +1,24 @@
+<div class="container mt-4">
+    <div class="card">
+      <div class="card-header">
+        <h4>Register Event</h4>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="description" class="form-label">Description:</label>
+            <input id="description" formControlName="description" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label for="eventType" class="form-label">Event Type:</label>
+            <select id="eventType" formControlName="eventType" class="form-select">
+              <option value="Manual">Manual</option>
+              <option value="API">API</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Register Event</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
