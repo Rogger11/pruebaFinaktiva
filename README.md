@@ -5,12 +5,17 @@
 
 Esta aplicación permite gestionar eventos mediante un backend en .NET 6 y un frontend en Angular 16. Los usuarios pueden registrar eventos, ver una lista de eventos y aplicar filtros para buscar eventos específicos. La aplicación asegura buena transaccionalidad, manejo desacoplado de la base de datos y registro de excepciones.
 
+## Prueba
+
+Se ha desplegado la aplicación en un ambiente de desarrollo en un Servidor Dedicado con Ubuntu 22.04.
+
+[Backend](http://69.61.227.218:412/swagger)
+[Frontend](http://69.61.227.218:413)
+
 ## Requisitos
 
-- .NET 6 SDK
-- Node.js (versión 16 o superior)
-- Angular CLI (versión 16)
-- SQL Server (LocalDB o cualquier instancia de SQL Server)
+- Docker
+- Docker Compose
 
 ## Configuración del Backend
 
@@ -32,9 +37,9 @@ Esta aplicación permite gestionar eventos mediante un backend en .NET 6 y un fr
      },
      "Logging": {
        "LogLevel": {
-       "Default": "Information",
-       "Microsoft": "Warning",
-       "Microsoft.Hosting.Lifetime": "Information"
+         "Default": "Information",
+         "Microsoft": "Warning",
+         "Microsoft.Hosting.Lifetime": "Information"
        }
      },
      "AllowedHosts": "*"
@@ -72,6 +77,24 @@ Esta aplicación permite gestionar eventos mediante un backend en .NET 6 y un fr
    ```
 
    La aplicación estará disponible en `http://localhost:4200`.
+
+## Despliegue con Docker
+
+1. **Construir y ejecutar los contenedores**:
+
+   ```sh
+   docker-compose up --build
+   ```
+
+2. **Verificar que los contenedores estén funcionando**:
+
+   ```sh
+   docker ps
+   ```
+
+3. **Acceder a la aplicación**:
+   - El backend estará disponible en [http://localhost:412](http://localhost:412).
+   - El frontend estará disponible en [http://localhost:413](http://localhost:413).
 
 ## Uso de la Aplicación
 
