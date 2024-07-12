@@ -16,6 +16,10 @@ Se ha desplegado la aplicación en un ambiente de desarrollo en un Servidor Dedi
 
 - Docker
 - Docker Compose
+- .NET 6 SDK
+- Node.js (versión 18 o superior)
+- Angular CLI (versión 16)
+- SQL Server (LocalDB o cualquier instancia de SQL Server)
 
 ## Configuración del Backend
 
@@ -95,6 +99,84 @@ Se ha desplegado la aplicación en un ambiente de desarrollo en un Servidor Dedi
 3. **Acceder a la aplicación**:
    - El backend estará disponible en [http://localhost:412](http://localhost:412).
    - El frontend estará disponible en [http://localhost:413](http://localhost:413).
+
+## Ejecución sin Docker
+
+### Backend
+
+1. **Clonar el Repositorio**:
+
+   ```sh
+   git clone https://github.com/Rogger11/pruebaFinaktiva/
+   cd pruebaFinaktiva/backend
+   ```
+
+2. **Configurar la Base de Datos**:
+
+   Asegúrate de que `appsettings.json` tenga la cadena de conexión correcta para tu instancia de SQL Server.
+
+   ```json
+   {
+     "ConnectionStrings": {
+       "DefaultConnection": "Server=localhost;User=admin;Password=Milton1103.;Database=Registration;Trusted_Connection=True;MultipleActiveResultSets=True;TrustServerCertificate=True;"
+     },
+     "Logging": {
+       "LogLevel": {
+         "Default": "Information",
+         "Microsoft": "Warning",
+         "Microsoft.Hosting.Lifetime": "Information"
+       }
+     },
+     "AllowedHosts": "*"
+   }
+   ```
+
+3. **Restaurar Paquetes y Crear la Base de Datos**:
+
+   ```sh
+   dotnet restore
+   dotnet ef database update
+   ```
+
+4. **Ejecutar la Aplicación**:
+
+   ```sh
+   dotnet run
+   ```
+
+   La aplicación estará disponible en `https://localhost:5001`.
+
+### Frontend
+
+1. **Instalar Node.js y Angular CLI**:
+
+   Asegúrate de tener Node.js versión 18 o superior y Angular CLI instalado globalmente.
+
+   ```sh
+   node -v
+   npm install -g @angular/cli
+   ```
+
+2. **Clonar el Repositorio**:
+
+   ```sh
+   git clone https://github.com/Rogger11/pruebaFinaktiva/
+   cd pruebaFinaktiva/frontend
+   ```
+
+3. **Instalar Dependencias**:
+
+   ```sh
+   npm install
+   ```
+
+4. **Ejecutar la Aplicación**:
+
+   ```sh
+   ng serve
+   ```
+
+   La aplicación estará disponible en `http://localhost:4200`.
 
 ## Uso de la Aplicación
 
