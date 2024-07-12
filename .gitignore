@@ -38,6 +38,7 @@ $RECYCLE.BIN/
 
 # VS Code directories
 .vscode/
+.vs/
 
 # Node.js
 node_modules/
