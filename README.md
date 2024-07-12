@@ -28,7 +28,7 @@ Esta aplicación permite gestionar eventos mediante un backend en .NET 6 y un fr
    ```json
    {
      "ConnectionStrings": {
-       "DefaultConnection": "Server=(localdb)\mssqllocaldb;Database=Registration;Trusted_Connection=True;MultipleActiveResultSets=true"
+       "DefaultConnection": "Server=localhost;User=admin;Password=Milton1103.;Database=Registration;Trusted_Connection=True;MultipleActiveResultSets=True;TrustServerCertificate=True;"
      },
      "Logging": {
        "LogLevel": {
