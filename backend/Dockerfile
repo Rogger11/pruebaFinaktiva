@@ -6,17 +6,17 @@ EXPOSE 80
 # Utiliza la imagen SDK para compilar y publicar la aplicación
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["backend/backend.csproj", "backend/"]
-RUN dotnet restore "backend/backend.csproj"
+COPY ["backend/Finaktiva.csproj", "backend/"]
+RUN dotnet restore "backend/Finaktiva.csproj"
 COPY . .
 WORKDIR "/src/backend"
-RUN dotnet build "backend.csproj" -c Release -o /app/build
+RUN dotnet build "Finaktiva.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "backend.csproj" -c Release -o /app/publish
+RUN dotnet publish "Finaktiva.csproj" -c Release -o /app/publish
 
 # Utiliza la imagen base para ejecutar la aplicación
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "backend.dll"]
+ENTRYPOINT ["dotnet", "Finaktiva.dll"]
